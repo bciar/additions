@@ -1,0 +1,744 @@
+@include clearfix;
+@include add-foundation-colors;
+
+/* https://codepen.io/OmarBenitez/pen/ryveZx */
+
+body,
+html {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    cursor: auto;
+}
+
+h1,
+h3,
+h5,
+h6 {
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 800;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+strong {
+    display: inline-block;
+}
+/*
+img{
+    width:100%;
+    max-width:100%;
+    height:auto
+}
+img{
+    -ms-interpolation-mode:bicubic
+}
+*/
+.icon {
+    width: 20px;
+    height: 20px;
+}
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    display: table;
+}
+
+.center {
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+a {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $primary-color;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.6px;
+}
+
+/* CSS */
+
+.topbar-center-logo {
+    .menu {
+        a {
+            color: $black;
+            font-size: 10px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+        }
+    }
+}
+
+.topbar-center-logo .top-bar-center {
+    flex: 1 0 auto;
+    @include breakpoint(small only) {
+        display: none;
+    }
+}
+
+.topbar-center-logo-mobile {
+    .menu-icon {
+        vertical-align: text-top;
+    }
+}
+
+.top-bar-center {
+    display: inline-block;
+    position: relative;
+    pointer-events: auto;
+}
+.top-bar-container {
+    text-align: center;
+    z-index: 99;
+    background-color: $white;
+    vertical-align: middle;
+    min-height: 88px;
+    position: relative;
+    pointer-events: none;
+}
+
+.sticky {
+    width: 100%;
+    z-index: 99;
+    min-height: 88px;
+}
+
+.intro {
+    z-index: 3;
+    position: relative;
+    padding: 95px 0px 95px 0px;
+    text-align: center;
+}
+
+.intro h1 {
+    margin: 20px 0px 50px 0px;
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.intro h3 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2.6px;
+    color: $primary-color;
+}
+
+.intro h2 {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 2.6px;
+    margin-bottom: 0;
+}
+
+.intro p {
+    font-size: 16px;
+}
+
+.line {
+    border-bottom: solid 2px $primary-color;
+    width: 56px;
+    display: inline-block;
+}
+
+.about,
+.bespoke {
+    .line {
+        width: 75px;
+    }
+
+    h1 {
+        font-weight: normal;
+        font-size: 30px;
+        letter-spacing: 4px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: 3px;
+        color: $white;
+    }
+
+    p,
+    .nostyle {
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: 0.9px;
+        line-height: 2;
+        margin: 24px;
+        text-transform: none;
+        color: $black;
+
+        @media only screen and (max-width: 959px) {
+            font-size: 14px;
+        }
+    }
+
+    .nostyle {
+        margin: 0;
+        display: inline;
+    }
+
+    small {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: 1.5px;
+        line-height: 2;
+    }
+
+    a {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 3.4px;
+        color: $primary-color;
+    }
+
+    .about-video-container {
+        margin: 0px;
+        height: 550px;
+        background: $black;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .cell {
+        max-width: 616px;
+    }
+
+    .topspacer {
+        margin: (116px/1440px * 100%) auto;
+    }
+
+    i {
+        font-size: 16px;
+    }
+
+    .fadeInUp {
+        opacity: 0;
+        animation: fadeInUp 1s ease 0.3s forwards;
+    }
+
+    .fadeInDown {
+        animation: fadeInUp 1s ease;
+    }
+}
+.footer {
+    background: $black;
+    flex-wrap: nowrap;
+    display: flex;
+
+    p,
+    a {
+        color: $white;
+        font-size: 12px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1.5px;
+        text-transform: none;
+    }
+
+    .footer-left {
+        display: block;
+        margin: 0px 100px 0px 100px;
+        flex: 1 1 auto;
+        margin-right: auto;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .footer-right {
+        display: block;
+        margin: 0px 100px 0px 100px;
+        flex: 0 1 auto;
+        margin-left: auto;
+        max-width: 100%;
+        text-align: right;
+    }
+
+    .footer-social-buttons {
+        padding-right: 10px;
+        list-style: none;
+        overflow: hidden;
+        text-align: right;
+
+        li {
+            float: right;
+            margin: 16px;
+        }
+    }
+}
+.slide {
+    opacity: 0;
+    position: fixed;
+    margin-top: 30px;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.slide-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    font-size: 190px;
+    color: $primary-color;
+    z-index: 1;
+}
+.slide-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.tile {
+    display: inline-block;
+    z-index: 33;
+}
+.tile h2 {
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 2.5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#slide-1 {
+    z-index: 0;
+}
+
+#slide-2 {
+    z-index: 1;
+}
+
+#slide-4 {
+    text-align: center;
+}
+#slide-4-title {
+    background: transparent;
+    z-index: 33;
+}
+#slide-4-boxes {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    z-index: 5;
+    position: relative;
+    display: inline-block;
+}
+.tile-image {
+    margin-bottom: 24px;
+}
+.fixed-on-top {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.l-top {
+    opacity: 0.5;
+    z-index: 0;
+    position: fixed;
+    background: -moz-linear-gradient(-45deg, #333973 0, #673a5d 100%);
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        color-stop(0%, #333973),
+        color-stop(100%, #673a5d)
+    );
+    background: -webkit-linear-gradient(-45deg, #333973 0, #673a5d 100%);
+    background: -o-linear-gradient(-45deg, #333973 0, #673a5d 100%);
+    background: -ms-linear-gradient(-45deg, #333973 0, #673a5d 100%);
+    background: linear-gradient(135deg, #333973 0, #673a5d 100%);
+}
+
+.unicode-symbol {
+    font-family: Georgia, Times, serif;
+    font-weight: 400;
+    font-size: 18px;
+    display: inline-block;
+}
+
+/* From website */
+
+.left {
+    float: left !important;
+}
+.right,
+footer i {
+    float: right !important;
+}
+.textright {
+    text-align: right;
+}
+/*.clearfix:before,.space .space-extended-details:before,.clearfix:after,.space .space-extended-details:after{
+    content:" ";
+    display:table
+}
+.clearfix:after,.space .space-extended-details:after{
+    clear:both
+}*/
+.hide {
+    display: none;
+}
+.antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+/*
+textarea{
+    height:auto;
+    min-height:50px
+}
+select{
+    width:100%
+}
+
+
+
+.top-bar{
+    height:auto;
+    min-height:50px;
+    font-size:10px
+}
+.top-bar .top-bar-section ul li>a{
+    text-transform:none;
+    font-size:0.85714em
+}
+.top-bar a.gold{
+    color:#baa082
+}
+.top-bar li.hero a>.badge,.top-bar li.badged a>.badge{
+    background-color:#b94a48;
+    border-radius:20px;
+    color:#fff;
+    line-height:12px;
+    margin-left:-16px;
+    padding:2px 4px;
+    position:absolute;
+    right:0px;
+    text-align:center;
+    top:3px
+}
+.top-bar li.hero a{
+    color:#baa082;
+    position:relative
+}
+.top-bar li.hero a:hover{
+    color:#fff
+}
+.top-bar li.hero+li.hero{
+    position:relative
+}
+.top-bar li.hero+li.hero:before{
+    color:#baa082;
+    content:'|';
+    display:inline-block;
+    left:0;
+    position:absolute;
+    top:13px;
+    z-index:10
+}
+.top-bar-section a.button.login{
+    background:none;
+    border:1px solid #aaa;
+    color:#aaa
+}
+.top-bar-section a.button.login:hover{
+    background:none;
+    border-color:#baa082;
+    color:#baa082
+}
+.top-bar-section a.button.signup{
+    background:#baa082;
+    border:1px solid #baa082;
+    color:#fff
+}
+.top-bar-section a.button.signup:hover{
+    background:#dbbd9a;
+    border-color:#dbbd9a
+}
+.top-bar-section .has-form{
+    padding:0 0.5rem
+}
+.fixed-top-bar-container .top-bar{
+    z-index:1010;
+    width:100%;
+    position:fixed;
+    top:0
+}
+@media (max-width: 1192px){
+    .top-bar-section li:not(.has-form) a:not(.button){
+        padding:0 0.75rem
+    }
+}
+
+@media (max-width: 1150px){
+    .header--phone-number{
+        display:none
+    }
+}
+.text-nowrap{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    max-width:100%
+}
+a.text-nowrap,small.text-nowrap,strong.text-nowrap,em.text-nowrap,span.text-nowrap{
+    display:inline-block
+}
+h1.beefy-headline,h2.beefy-headline,h3.beefy-headline,h4.beefy-headline,h5.beefy-headline,h6.beefy-headline{
+    font-family:"Avenir Next W01", "Avenir", Helvetica, Arial;
+    font-size:2rem;
+    font-weight:800;
+    letter-spacing:0.5px;
+    text-transform:uppercase
+}
+h1.inverted,h2.inverted,h3.inverted,h4.inverted,h5.inverted,h6.inverted,p.inverted,small.inverted,span.inverted,strong.inverted,em.inverted{
+    color:#fff
+}
+h1.uppercase,h2.uppercase,h3.uppercase,h4.uppercase,h5.uppercase,h6.uppercase,p.uppercase,small.uppercase,span.uppercase,strong.uppercase,em.uppercase{
+    text-transform:uppercase
+}
+h1.titlecase,h2.titlecase,h3.titlecase,h4.titlecase,h5.titlecase,h6.titlecase,p.titlecase,small.titlecase,span.titlecase,strong.titlecase,em.titlecase{
+    text-transform:titlecase
+}
+h1.semi-bold,h2.semi-bold,h3.semi-bold,h4.semi-bold,h5.semi-bold,h6.semi-bold,p.semi-bold,small.semi-bold,span.semi-bold,strong.semi-bold,em.semi-bold{
+    font-weight:700
+}
+h1.light,h2.light,h3.light,h4.light,h5.light,h6.light,p.light,small.light,span.light,strong.light,em.light{
+    font-weight:400
+}
+h1.faded,.space-suggestion h1.title,h2.faded,.space-suggestion h2.title,h3.faded,.space-suggestion h3.title,h4.faded,.space-suggestion h4.title,h5.faded,.space-suggestion h5.title,h6.faded,.space-suggestion h6.title,p.faded,.space-suggestion p.title,small.faded,.space-suggestion small.title,span.faded,.space-suggestion span.title,strong.faded,.space-suggestion strong.title,em.faded,.space-suggestion em.title{
+    color:#666
+}
+h1.tight,h2.tight,h3.tight,h4.tight,h5.tight,h6.tight,p.tight,small.tight,span.tight,strong.tight,em.tight{
+    letter-spacing:-1px
+}
+h1.loose,h2.loose,h3.loose,h4.loose,h5.loose,h6.loose,p.loose,small.loose,span.loose,strong.loose,em.loose{
+    letter-spacing:0.5px
+}
+h1.inline,h2.inline,h3.inline,h4.inline,h5.inline,h6.inline,p.inline,small.inline,span.inline,strong.inline,em.inline{
+    display:inline-block
+}
+h1{
+    text-transform:uppercase;
+    font-weight:700
+}
+h1,h2,h3{
+    letter-spacing:-.5px
+}
+h2{
+    letter-spacing:-1px;
+    font-weight:400
+}
+h3{
+    font-weight:400;
+    letter-spacing:-1px;
+    margin-top:15px;
+    margin-bottom:20px
+}
+h5{
+    text-transform:uppercase;
+    letter-spacing:0.0357142857rem
+}
+h6{
+    text-transform:uppercase;
+    letter-spacing:0.0357142857rem
+}
+small{
+    line-height:inherit !important
+}
+.tagline{
+    color:#888;
+    font-weight:400;
+    letter-spacing:-1px;
+    font-size:1.2857142857rem
+}
+.h1,.h2,.h3,.h4,.h5 .h6{
+    margin:0;
+    font-weight:normal;
+    text-transform:none;
+    letter-spacing:0;
+    line-height:2rem
+}
+.h1{
+    font-size:1rem
+}
+.h2{
+    font-size:1.6rem
+}
+.h3{
+    font-size:1.3rem
+}
+.h4{
+    font-size:1rem
+}
+.h5{
+    font-size:1rem
+}
+.h6{
+    font-size:1rem
+}
+.h1.h1--with-margin,.h2.h2--with-margin,.h3.h3--with-margin,.h4.h4--with-margin,.h5.h5--with-margin,.h6.h6--with-margin{
+    margin-bottom:.7em
+}
+section footer{
+    background:transparent !important;
+    padding-top:55px
+}
+section header{
+    padding:0 5px 10px 5px
+}
+
+.text-nowrap{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    max-width:100%
+}
+a.text-nowrap,small.text-nowrap,strong.text-nowrap,em.text-nowrap,span.text-nowrap{
+    display:inline-block
+}
+h1.beefy-headline,h2.beefy-headline,h3.beefy-headline,h4.beefy-headline,h5.beefy-headline,h6.beefy-headline{
+    font-family:"Avenir Next W01", "Avenir", Helvetica, Arial;
+    font-size:2rem;
+    font-weight:800;
+    letter-spacing:0.5px;
+    text-transform:uppercase
+}
+h1.inverted,h2.inverted,h3.inverted,h4.inverted,h5.inverted,h6.inverted,p.inverted,small.inverted,span.inverted,strong.inverted,em.inverted{
+    color:#fff
+}
+h1.uppercase,h2.uppercase,h3.uppercase,h4.uppercase,h5.uppercase,h6.uppercase,p.uppercase,small.uppercase,span.uppercase,strong.uppercase,em.uppercase{
+    text-transform:uppercase
+}
+h1.titlecase,h2.titlecase,h3.titlecase,h4.titlecase,h5.titlecase,h6.titlecase,p.titlecase,small.titlecase,span.titlecase,strong.titlecase,em.titlecase{
+    text-transform:titlecase
+}
+h1.semi-bold,h2.semi-bold,h3.semi-bold,h4.semi-bold,h5.semi-bold,h6.semi-bold,p.semi-bold,small.semi-bold,span.semi-bold,strong.semi-bold,em.semi-bold{
+    font-weight:700
+}
+h1.light,h2.light,h3.light,h4.light,h5.light,h6.light,p.light,small.light,span.light,strong.light,em.light{
+    font-weight:400
+}
+h1.faded,h2.faded,h3.faded,h4.faded,h5.faded,h6.faded,p.faded,small.faded,span.faded,strong.faded,em.faded{
+    color:#666
+}
+h1.tight,h2.tight,h3.tight,h4.tight,h5.tight,h6.tight,p.tight,small.tight,span.tight,strong.tight,em.tight{
+    letter-spacing:-1px
+}
+h1.loose,h2.loose,h3.loose,h4.loose,h5.loose,h6.loose,p.loose,small.loose,span.loose,strong.loose,em.loose{
+    letter-spacing:0.5px
+}
+h1.inline,h2.inline,h3.inline,h4.inline,h5.inline,h6.inline,p.inline,small.inline,span.inline,strong.inline,em.inline{
+    display:inline-block
+}
+h1{
+    text-transform:uppercase;
+    font-weight:700
+}
+h1,h2,h3{
+    letter-spacing:-.5px
+}
+h2{
+    letter-spacing:-1px;
+    font-weight:400
+}
+h3{
+    font-weight:400;
+    letter-spacing:-1px;
+    margin-top:15px;
+    margin-bottom:20px
+}
+h5{
+    text-transform:uppercase;
+    letter-spacing:0.0357142857rem
+}
+h6{
+    text-transform:uppercase;
+    letter-spacing:0.0357142857rem
+}
+small{
+    line-height:inherit !important
+}
+.tagline{
+    color:#888;
+    font-weight:400;
+    letter-spacing:-1px;
+    font-size:1.2857142857rem
+}
+.h1,.h2,.h3,.h4,.h5 .h6{
+    margin:0;
+    font-weight:normal;
+    text-transform:none;
+    letter-spacing:0;
+    line-height:2rem
+}
+.h1{
+    font-size:1rem
+}
+.h2{
+    font-size:1.6rem
+}
+.h3{
+    font-size:1.3rem
+}
+.h4{
+    font-size:1rem
+}
+.h5{
+    font-size:1rem
+}
+.h6{
+    font-size:1rem
+}
+.h1.h1--with-margin,.h2.h2--with-margin,.h3.h3--with-margin,.h4.h4--with-margin,.h5.h5--with-margin,.h6.h6--with-margin{
+    margin-bottom:.7em
+}
+*/

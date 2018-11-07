@@ -1,0 +1,14 @@
+$screen-xl-min: 840px;
+$screen-large-max: $screen-xl-min - 1;
+$screen-large-min: 724px;
+$screen-small-max: $screen-large-min - 1;
+
+$color-gold: #baa082;
+$color-grey-light: #f5f5f5;
+
+@mixin centerTranslate($position: absolute) {
+    position: $position;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

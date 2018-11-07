@@ -1,0 +1,131 @@
+@keyframes appearAnimationDown2X {
+    from {
+        transform: translateY(-200px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes appearAnimationDown {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes appearAnimationUp2X {
+    from {
+        transform: translateY(200px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes appearAnimationUp {
+    from {
+        transform: translateY(100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes appearAnimationSlideRight {
+    from {
+        transform: translateX(-180px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes appearAnimationRect {
+    from {
+        // width: 200px;
+        transform: scale(200, 1) translate(-50%, -50%);
+    }
+    to {
+        transform: scale(1, 1) translate(-50%, -50%);
+    }
+}
+
+.loading-screen {
+    background: black;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 120;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        height: auto;
+        width: 500px;
+
+        @media only screen and (max-width: 520px) {
+            width: 320px;
+        }
+    }
+
+    g:first-child {
+        transform: translateX(-180px);
+        animation: appearAnimationSlideRight 1s ease 2s forwards;
+    }
+
+    g:last-child {
+        transform: translateX(-180px);
+        animation: appearAnimationSlideRight 1s ease 2s forwards;
+
+        path:nth-child(1),
+        path:nth-child(5),
+        path:nth-child(8) {
+            transform: translateY(-100px);
+            animation: appearAnimationDown2X 1.5s linear forwards;
+        }
+
+        path:nth-child(3) {
+            transform: translateY(-100px);
+            animation: appearAnimationDown 1.5s linear forwards;
+        }
+
+        path:nth-child(4),
+        path:nth-child(7) {
+            transform: translate(-100px);
+            animation: appearAnimationUp 1.5s linear forwards;
+        }
+
+        path:nth-child(2),
+        path:nth-child(6),
+        path:nth-child(9) {
+            transform: translate(-100px);
+            animation: appearAnimationUp2X 1.5s linear forwards;
+        }
+    }
+
+    #svg-black-rect {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: scale(200, 1) translate(-50%, -50%);
+        width: 1px;
+        height: 80px;
+        background: black;
+        transform-origin: 100% 50%;
+        animation: appearAnimationRect 1s ease 2s forwards;
+
+        @media only screen and (max-width: 520px) {
+            transform-origin: 85% 50%;
+        }
+    }
+}
